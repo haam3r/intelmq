@@ -17,7 +17,7 @@ install:
   - if [[ $TRAVIS_PYTHON_VERSION < '3.5' ]]; then pip install typing; fi
   - pip install codecov
   - pip install pycodestyle
-  - sudo pip install .
+  - sudo pip3 install .
   - sudo cp /opt/intelmq/etc/examples/* /opt/intelmq/etc/
 before_script:
   - psql -c "CREATE USER intelmq WITH SUPERUSER" -U postgres
